@@ -13,6 +13,6 @@ group :development, :test, :production do
 end
 
 group :development, :test do
-  gem "bootsnap", require: false
+  # gem "bootsnap", require: false
   gem "debug", platforms: %i[mri windows]
 end
