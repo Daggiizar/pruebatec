@@ -7,9 +7,8 @@ gem "puma", ">= 5.0"
 gem "tzinfo-data", platforms: %i[windows jruby]
 gem "rack-cors", require: "rack/cors"
 
-# Base de datos SQLite para desarrollo, test y producción (sin persistencia)
 group :development, :test, :production do
-  gem "sqlite3", "~> 1.4"
+  # gem "sqlite3", "~> 1.4"
 end
 
 group :development, :test do
