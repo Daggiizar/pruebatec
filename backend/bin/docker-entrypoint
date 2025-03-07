@@ -1,8 +1,11 @@
 #!/bin/bash -e
 
-# If running the rails server then create or migrate existing database
+# If running the rails server, just start the server without attempting database operations
 if [ "${1}" == "./bin/rails" ] && [ "${2}" == "server" ]; then
-  ./bin/rails db:prepare
+  echo "Skipping db:prepare as no database is used"
+else
+  # Optionally, you can add other commands here if needed
+  echo "Running custom setup or skipping database operations"
 fi
 
 exec "${@}"
